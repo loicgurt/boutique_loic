@@ -1,81 +1,41 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boutique Loïc</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Цар Boutique</title>
   <style>
-    * {
-      box-sizing: border-box;
+    body, html {
       margin: 0;
       padding: 0;
+      height: 100%;
+      font-family: 'Arial', sans-serif;
     }
-    body {
-      font-family: 'Bebas Neue', sans-serif;
-      color: #fff;
-    }
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.9);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 30px;
-      z-index: 1000;
-    }
-    header img {
-      height: 50px;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #fff;
-      font-size: 18px;
-    }
+
     .hero {
       height: 100vh;
-      background: url('3b2c87b2-82ba-4c62-800e-3dda93f29dc2.png') center center / contain no-repeat;
-      background-color: #000;
-      background-blend-mode: overlay;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
+      background: url('photo.png') center center / contain no-repeat;
+      background-color: white;
+      background-size: 60%;
       position: relative;
     }
-    .hero::before {
-      content: "";
+
+    .hero-text {
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.7);
-      z-index: 1;
-    }
-    .hero h1 {
-      position: relative;
-      z-index: 2;
+      text-align: center;
+      color: #000;
       font-size: 3em;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="Logo Boutique Loïc">
-    <nav>
-      <a href="#produits">Boutique</a>
-      <a href="#apropos">À propos</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
   <section class="hero">
-    <h1>Цар. AU SOMMET DU RAFFINEMENT.</h1>
+    <div class="hero-text">Цар. AU SOMMET DU RAFFINEMENT.</div>
   </section>
 </body>
 </html>
