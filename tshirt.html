@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T-shirt Classique - Boutique Loïc</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: black;
+      padding: 15px;
+      color: white;
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+    img {
+      width: 100%;
+      max-width: 300px;
+      display: block;
+      margin: 0 auto 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    select, button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      background-color: black;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>Boutique Loïc</h2>
+</header>
+
+<div class="container">
+  <img src="tshirt.jpg" alt="T-shirt Classique">
+  <h1>T-shirt Classique</h1>
+  <p style="text-align:center;">T-shirt 100% coton, confortable et stylé.</p>
+  <p style="text-align:center;"><strong>Prix : 19.90 CHF</strong></p>
+
+  <label for="taille" style="text-align:center;display:block;">Choisis ta taille :</label>
+  <select id="taille">
+    <option value="S">S</option>
+    <option value="M">M</option>
+    <option value="L">L</option>
+    <option value="XL">XL</option>
+  </select>
+
+  <button onclick="acheter()">Acheter avec PayPal</button>
+</div>
+
+<script>
+  function acheter() {
+    const taille = document.getElementById("taille").value;
+    const lienPaypal = "https://paypal.me/boutiqueLoic/19.90";
+    window.open(`${lienPaypal}?taille=${taille}`, '_blank');
+  }
+</script>
+
+</body>
+</html>
