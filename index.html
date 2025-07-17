@@ -3,57 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>T-shirt Classique - Boutique Loïc</title>
+  <title>Boutique Loïc</title>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Bebas Neue', sans-serif;
-      background-color: #111;
-      color: #fff;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-    header {
+    body {
+      font-family: 'Bebas Neue', sans-serif;
+      color: #fff;
       background-color: #000;
-      padding: 10px 30px;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding: 10px 30px;
+      z-index: 1000;
     }
     header img {
       height: 50px;
     }
     nav a {
-      color: #fff;
-      text-decoration: none;
       margin: 0 15px;
+      text-decoration: none;
+      color: #fff;
       font-size: 18px;
     }
-    .container {
-      padding: 60px 20px;
+    .hero {
+      height: 100vh;
+      background: url('photo.png') center center / contain no-repeat;
+      background-color: #000;
+      background-blend-mode: overlay;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 1;
+    }
+    .hero h1 {
+      position: relative;
+      z-index: 2;
+      font-size: 3em;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+    }
+    .produit {
       max-width: 800px;
-      margin: auto;
+      margin: 20px auto;
+      background: #111;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
       text-align: center;
     }
-    .product-img {
+    .produit img {
       max-width: 100%;
-      border-radius: 8px;
+      border-radius: 10px;
+      margin-bottom: 20px;
     }
-    .price {
-      font-size: 24px;
-      margin: 20px 0;
+    .produit h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
     }
-    select, button {
+    .produit p {
+      margin-bottom: 15px;
+    }
+    .produit select, .produit button {
       padding: 10px;
+      margin: 5px;
       font-size: 16px;
-      margin-top: 15px;
     }
-    button {
+    .produit button {
       background-color: #fff;
       color: #000;
       border: none;
       cursor: pointer;
-      font-weight: bold;
     }
   </style>
 </head>
@@ -62,25 +102,38 @@
     <img src="logo.png" alt="Logo Boutique Loïc">
     <nav>
       <a href="index.html">Accueil</a>
-      <a href="#apropos">A propos</a>
+      <a href="#produits">Boutique</a>
+      <a href="#apropos">À propos</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <div class="container">
-    <h1>T-shirt Classique</h1>
-    <img src="tshirt.jpg" alt="T-shirt classique" class="product-img">
-    <p class="price">19.90 CHF</p>
-    <label for="taille">Choisis ta taille :</label><br>
-    <select id="taille">
-      <option value="S">S</option>
-      <option value="M">M</option>
-      <option value="L">L</option>
-      <option value="XL">XL</option>
-    </select><br>
-    <a href="https://paypal.me/boutiqueLoic?country.x=CH&locale.x=fr_FR" target="_blank">
-      <button>Acheter maintenant</button>
-    </a>
-  </div>
+  <section class="hero">
+    <h1>Цар. AU SOMMET DU RAFFINEMENT.</h1>
+  </section>
+
+  <section class="produit">
+    <img src="casquette.jpg" alt="Casquette">
+    <h2>Casquette Streetwear</h2>
+    <p>Casquette tendance, parfaite pour un look urbain.</p>
+    <p>Prix : 14.90 CHF</p>
+    <a href="casquette.html"><button>Voir le produit</button></a>
+  </section>
+
+  <section class="produit">
+    <img src="sweat à capuche.jpg" alt="Sweat à capuche">
+    <h2>Hoodie Stylé</h2>
+    <p>Sweat à capuche confortable et stylé, disponible en plusieurs tailles.</p>
+    <p>Prix : 34.90 CHF</p>
+    <a href="sweat à capuche.html"><button>Voir le produit</button></a>
+  </section>
+
+  <section class="produit">
+    <img src="tshirt.jpg" alt="T-shirt classique">
+    <h2>T-shirt Classique</h2>
+    <p>T-shirt 100% coton, confortable et intemporel.</p>
+    <p>Prix : 19.90 CHF</p>
+    <a href="tshirt.html"><button>Voir le produit</button></a>
+  </section>
 </body>
 </html>
